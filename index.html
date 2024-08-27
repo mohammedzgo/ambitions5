@@ -4,47 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المهندس محمد طارق القرشي</title>
+    <title>موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1b1f3b;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #000000;
             margin: 0;
             padding: 0;
             text-align: center;
             direction: rtl;
+            background-image: url('A_classic,_modern_background_image_featuring_the_t.png');
+            background-size: cover;
         }
         header {
-            background-color: #162447;
+            background-color: #1b1f3b;
             padding: 20px;
+            color: #ffffff;
+        }
+        header img {
+            max-width: 100px;
+            margin-bottom: 10px;
         }
         h1 {
             margin: 0;
         }
         section {
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #1b1f3b;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #162447;
         }
         footer {
             background-color: #162447;
             padding: 10px;
+            color: #ffffff;
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .content-section {
+            display: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>المهندس محمد طارق القرشي</h1>
+        <img src="A_classic,_modern_background_image_featuring_the_t.png" alt="شعار زي ما بدك">
+        <h1>موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل</h1>
     </header>
-    <section>
-        <h2>عن الصفحة</h2>
-        <p>هذه الصفحة مخصصة لعرض التصاميم والإنشاءات البرمجية الخاصة بالمهندس محمد طارق القرشي.</p>
+    <section id="main-section">
+        <a href="javascript:void(0);" class="button" onclick="showSection('games')">قسم حسابات الألعاب</a>
+        <a href="javascript:void(0);" class="button" onclick="showSection('social')">قسم حسابات التواصل</a>
+    </section>
+    <section id="games" class="content-section">
+    <h2>قسم حسابات الألعاب</h2>
+    
+    <h3>حسابات بوبجي</h3>
+    <div>
+        <img src="     images/pubg_account1.jpg      " alt="PUBG Account 1" style="max-width: 300px;">
+        <p>السعر: 50 دولار</p>
+        <p>ID: 5438236875</p>
+    </div>
+
+    <h3>حسابات جنشن إمباكت</h3>
+    <div>
+        <img src="     images/genshin_account1.jpg    " alt="Genshin Impact Account 1" style="max-width: 300px;">
+        <p>السعر: 100 دولار</p>
+        <p>ID: 743859420</p>
+    </div>
+
+    <a href="javascript:void(0);" class="button" onclick="showMain()">العودة إلى الصفحة الرئيسية</a>
+</section>
+
+    <section id="social" class="content-section">
+        <h2>قسم حسابات التواصل</h2>
+        <ul>
+            <li>حسابات إنستجرام</li>
+        </ul>
+        <a href="javascript:void(0);" class="button" onclick="showMain()">العودة إلى الصفحة الرئيسية</a>
     </section>
     <footer>
-        <p>&copy; 2024 المهندس محمد طارق القرشي. جميع الحقوق محفوظة.</p>
+        <p>&copy; 2024 موقع زي ما بدك. جميع الحقوق محفوظة.</p>
     </footer>
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('main-section').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        function showMain() {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById('main-section').style.display = 'block';
+        }
+    </script>
+
+
+
+
 </body>
      
 <script async src="//static.getclicky.com/101463068.js"></script>
