@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -80,6 +79,10 @@
         .image-gallery img {
             max-width: 100%;
             border-radius: 10px;
+            display: none;
+        }
+        .image-gallery img.active {
+            display: block;
         }
         .return-button {
             display: inline-block;
@@ -102,6 +105,11 @@
         .content-section.active {
             display: block;
         }
+        .image-counter {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +128,7 @@
         <a href="javascript:void(0);" class="button" onclick="showSection('games')">قسم حسابات الألعاب</a>
         <a href="javascript:void(0);" class="button" onclick="showSection('social')">قسم حسابات التواصل</a>
     </section>
-    <section id="games" class="content-section active">
+    <section id="games" class="content-section">
         <h2 id="games-title">قسم حسابات الألعاب</h2>
         <a href="javascript:void(0);" class="return-button" onclick="showSection('main-section')">العودة</a>
         <h3 id="pubg-title">حسابات بوبجي</h3>
@@ -133,80 +141,96 @@
         <p id="genshin-price">السعر: 100 دولار</p>
         <p id="genshin-id">ID: 743859420</p>
         <div class="image-gallery">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A7-%D9%A4%D9%A0-%D9%A8%D9%A6%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 1">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A7-%D9%A4%D9%A0-%D9%A8%D9%A6%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 1" class="active">
             <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A5%D9%A3-%D9%A6%D9%A7%D9%A3_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 2">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0-%D9%A2%D9%A8%D9%A3_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 3">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A1%D9%A5-%D9%A3%D9%A4%D9%A8_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 4">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A1%D9%A7_%D9%A1%D9%A2%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 5">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0_%D9%A1%D9%A1%D9%A7_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 6">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A3%D9%A3_%D9%A2%D9%A8%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 7">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A1%D9%A9_%D9%A2%D9%A7%D9%A1_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 8">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0_%D9%A1%D9%A3%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 9">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0_%D9%A1%D9%A3%D9%A8_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 10">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A4%D9%A5-%D9%A8%D9%A9%D9%A7_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 3">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0-%D9%A2%D9%A8%D9%A3_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 4">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A4-%D9%A1%D9%A7%D9%A2_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 5">
         </div>
+        <div class="image-counter">صورة 1 من 5</div>
     </section>
     <section id="social" class="content-section">
-        <a href="javascript:void(0);" class="return-button" onclick="showSection('main-section')">العودة</a>
         <h2 id="social-title">قسم حسابات التواصل</h2>
+        <a href="javascript:void(0);" class="return-button" onclick="showSection('main-section')">العودة</a>
         <h3 id="instagram-title">حسابات إنستجرام</h3>
-        <div>
-            <p id="instagram-contact">للاستفسار عن حسابات إنستجرام، يرجى الاتصال بنا عبر البريد الإلكتروني.</p>
-        </div>
+        <p id="instagram-note">هنا يمكنك العثور على حسابات إنستجرام المتاحة. لا تتردد في التواصل معنا للحصول على التفاصيل الكاملة.</p>
+        <!-- أضف هنا تفاصيل الحسابات المتاحة عند الحاجة -->
     </section>
     <footer>
-        <p>جميع الحقوق محفوظة © 2024 زي ما بدك</p>
+        <p>جميع الحقوق محفوظة لـ <strong>زي ما بدك</strong> &copy; 2024</p>
         <p>للتواصل: <a href="mailto:www.alqrshiglma.com@gmail.com">www.alqrshiglma.com@gmail.com</a></p>
     </footer>
     <script>
-        function toggleLanguage() {
-            var currentLang = document.documentElement.lang;
-            if (currentLang === 'ar') {
-                document.documentElement.lang = 'en';
-                document.getElementById('site-title').innerText = 'ZeeMaBadak for Selling Game Accounts and Social Media Accounts';
-                document.getElementById('description-text').innerText = 'Welcome to our leading store for selling game accounts and social media accounts. We are here to be the trusted bridge between you and sellers, offering a unique and secure shopping experience. Our store operates as an authorized and specialized intermediary in sales, ensuring that all transactions are conducted in a fully official and professional manner.';
-                document.getElementById('description-note').innerText = 'Please note that our store offers a limited number of accounts, as we search for reliable accounts and ensure their temporary ownership with us. You may find a small number of accounts available in our store, not exceeding five accounts, but we guarantee their quality and credibility.';
-                document.getElementById('description-pricing').innerText = 'We strive to offer the lowest possible prices, which may vary significantly from the original prices of the accounts. Therefore, we recommend not missing out on opportunities and securing your accounts quickly.';
-                document.getElementById('description-contact').innerText = 'For more details about purchasing and account information, please feel free to contact us via the email at the bottom of the page. We are here to assist you and provide the necessary support to ensure an excellent shopping experience. Thank you for visiting.';
-                document.getElementById('games-title').innerText = 'Game Accounts Section';
-                document.getElementById('pubg-title').innerText = 'PUBG Accounts';
-                document.getElementById('genshin-title').innerText = 'Genshin Impact Accounts';
-                document.getElementById('pubg-price').innerText = 'Price: $50';
-                document.getElementById('pubg-id').innerText = 'ID: 5438236875';
-                document.getElementById('genshin-price').innerText = 'Price: $100';
-                document.getElementById('genshin-id').innerText = 'ID: 743859420';
-                document.getElementById('social-title').innerText = 'Social Media Accounts Section';
-                document.getElementById('instagram-title').innerText = 'Instagram Accounts';
-                document.getElementById('instagram-contact').innerText = 'For inquiries about Instagram accounts, please contact us via email.';
-            } else {
-                document.documentElement.lang = 'ar';
-                document.getElementById('site-title').innerText = 'موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل';
-                document.getElementById('description-text').innerText = 'مرحباً بكم في متجرنا الرائد في بيع حسابات الألعاب وحسابات التواصل الاجتماعي. نحن هنا لنكون جسر الثقة بينكم وبين البائعين، حيث نقدم لكم تجربة تسوق مميزة وآمنة بنسبة 100%. يعمل متجرنا كوسيط معتمد ومختص في عمليات البيع، مما يضمن أن جميع المعاملات تتم بطرق رسمية ومهنية بالكامل.';
-                document.getElementById('description-note').innerText = 'يرجى ملاحظة أن متجرنا يقدم عددًا محدودًا من الحسابات، حيث نقوم بالبحث عن حسابات موثوقة ونتأكد من ملكيتها المؤقتة لدينا. قد تجدون عددًا قليلاً من الحسابات المتاحة في متجرنا، لا يتجاوز خمسة حسابات، ولكننا نضمن لكم جودتها ومصداقيتها.';
-                document.getElementById('description-pricing').innerText = 'نحن نحرص على تقديم أقل الأسعار الممكنة، والتي قد تكون مختلفة بشكل كبير عن الأسعار الأصلية للحسابات. لذا، ننصحكم بعدم تفويت الفرص وحجز حساباتكم بسرعة.';
-                document.getElementById('description-contact').innerText = 'لمعرفة المزيد من التفاصيل حول عمليات الشراء ومعلومات الحسابات، لا تترددوا في التواصل معنا عبر البريد الإلكتروني الموجود أسفل الصفحة. نحن هنا لخدمتكم وتقديم الدعم اللازم لضمان تجربة تسوق ممتازة. وشكراً لزيارتكم.';
-                document.getElementById('games-title').innerText = 'قسم حسابات الألعاب';
-                document.getElementById('pubg-title').innerText = 'حسابات بوبجي';
-                document.getElementById('genshin-title').innerText = 'حسابات جنشن إمباكت';
-                document.getElementById('pubg-price').innerText = 'السعر: 50 دولار';
-                document.getElementById('pubg-id').innerText = 'ID: 5438236875';
-                document.getElementById('genshin-price').innerText = 'السعر: 100 دولار';
-                document.getElementById('genshin-id').innerText = 'ID: 743859420';
-                document.getElementById('social-title').innerText = 'قسم حسابات التواصل';
-                document.getElementById('instagram-title').innerText = 'حسابات إنستجرام';
-                document.getElementById('instagram-contact').innerText = 'للاستفسار عن حسابات إنستجرام، يرجى الاتصال بنا عبر البريد الإلكتروني.';
-            }
-        }
+        let currentLanguage = 'ar'; // اللغة الحالية
 
         function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(section => {
+            document.querySelectorAll('.content-section').forEach((section) => {
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
         }
-        
-        // Open "games" section by default
-        showSection('games');
+
+        function toggleLanguage() {
+            if (currentLanguage === 'ar') {
+                document.documentElement.lang = 'en';
+                document.getElementById('site-title').textContent = 'ZeeMaBadak for Selling Game Accounts and Social Media Accounts';
+                document.getElementById('description-text').textContent = 'Welcome to our leading store for selling game and social media accounts. We are here to be the trusted bridge between you and sellers, offering you a unique and secure shopping experience. Our store operates as an accredited and specialized intermediary in the sales process, ensuring that all transactions are conducted officially and professionally.';
+                document.getElementById('description-note').textContent = 'Please note that our store offers a limited number of accounts, as we search for reliable accounts and ensure their temporary ownership with us. You may find a few accounts available in our store, not exceeding five accounts, but we guarantee their quality and authenticity.';
+                document.getElementById('description-pricing').textContent = 'We strive to offer the lowest possible prices, which may be significantly different from the original prices of the accounts. Therefore, we advise you not to miss out on opportunities and book your accounts quickly.';
+                document.getElementById('description-contact').textContent = 'For more details about the purchase process and account information, please do not hesitate to contact us via the email address at the bottom of the page. We are here to serve you and provide the necessary support to ensure an excellent shopping experience. Thank you for visiting.';
+                document.getElementById('games-title').textContent = 'Game Accounts Section';
+                document.getElementById('pubg-title').textContent = 'PUBG Accounts';
+                document.getElementById('genshin-title').textContent = 'Genshin Impact Accounts';
+                document.getElementById('pubg-price').textContent = 'Price: $50';
+                document.getElementById('pubg-id').textContent = 'ID: 5438236875';
+                document.getElementById('genshin-price').textContent = 'Price: $100';
+                document.getElementById('genshin-id').textContent = 'ID: 743859420';
+                document.getElementById('instagram-title').textContent = 'Instagram Accounts';
+                document.getElementById('instagram-note').textContent = 'Here you can find the available Instagram accounts. Feel free to contact us for full details.';
+                currentLanguage = 'en';
+            } else {
+                document.documentElement.lang = 'ar';
+                document.getElementById('site-title').textContent = 'موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل';
+                document.getElementById('description-text').textContent = 'مرحباً بكم في متجرنا الرائد في بيع حسابات الألعاب وحسابات التواصل الاجتماعي. نحن هنا لنكون جسر الثقة بينكم وبين البائعين، حيث نقدم لكم تجربة تسوق مميزة وآمنة بنسبة 100%. يعمل متجرنا كوسيط معتمد ومختص في عمليات البيع، مما يضمن أن جميع المعاملات تتم بطرق رسمية ومهنية بالكامل.';
+                document.getElementById('description-note').textContent = 'يرجى ملاحظة أن متجرنا يقدم عددًا محدودًا من الحسابات، حيث نقوم بالبحث عن حسابات موثوقة ونتأكد من ملكيتها المؤقتة لدينا. قد تجدون عددًا قليلاً من الحسابات المتاحة في متجرنا، لا يتجاوز خمسة حسابات، ولكننا نضمن لكم جودتها ومصداقيتها.';
+                document.getElementById('description-pricing').textContent = 'نحن نحرص على تقديم أقل الأسعار الممكنة، والتي قد تكون مختلفة بشكل كبير عن الأسعار الأصلية للحسابات. لذا، ننصحكم بعدم تفويت الفرص وحجز حساباتكم بسرعة.';
+                document.getElementById('description-contact').textContent = 'لمعرفة المزيد من التفاصيل حول عمليات الشراء ومعلومات الحسابات، لا تترددوا في التواصل معنا عبر البريد الإلكتروني الموجود أسفل الصفحة. نحن هنا لخدمتكم وتقديم الدعم اللازم لضمان تجربة تسوق ممتازة. وشكراً لزيارتكم.';
+                document.getElementById('games-title').textContent = 'قسم حسابات الألعاب';
+                document.getElementById('pubg-title').textContent = 'حسابات بوبجي';
+                document.getElementById('genshin-title').textContent = 'حسابات جنشن إمباكت';
+                document.getElementById('pubg-price').textContent = 'السعر: 50 دولار';
+                document.getElementById('pubg-id').textContent = 'ID: 5438236875';
+                document.getElementById('genshin-price').textContent = 'السعر: 100 دولار';
+                document.getElementById('genshin-id').textContent = 'ID: 743859420';
+                document.getElementById('instagram-title').textContent = 'حسابات إنستجرام';
+                document.getElementById('instagram-note').textContent = 'هنا يمكنك العثور على حسابات إنستجرام المتاحة. لا تتردد في التواصل معنا للحصول على التفاصيل الكاملة.';
+                currentLanguage = 'ar';
+            }
+        }
+
+        // Function to handle image gallery navigation
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-gallery img');
+        const imageCounter = document.querySelector('.image-counter');
+
+        function updateImageGallery() {
+            images.forEach((img, index) => {
+                img.classList.toggle('active', index === currentImageIndex);
+            });
+            imageCounter.textContent = `صورة ${currentImageIndex + 1} من ${images.length}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateImageGallery();
+            setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                updateImageGallery();
+            }, 3000); // Change image every 3 seconds
+        });
     </script>
+
+
+
 
 
 
