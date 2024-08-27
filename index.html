@@ -21,10 +21,12 @@
             background-color: #1b1f3b;
             padding: 20px;
             color: #ffffff;
+            position: relative;
         }
         header img {
-            max-width: 100px;
+            max-width: 200px;
             margin-bottom: 10px;
+            opacity: 0.8; /* ضبط الشفافية */
         }
         h1 {
             margin: 0;
@@ -65,7 +67,7 @@
 </head>
 <body>
     <header>
-        <img src="    https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/eb9c5e77-238c-4c3a-9cad-e4f650ddb60e.webp " alt="شعار زي ما بدك" style="max-width: 1px;">
+        <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/eb9c5e77-238c-4c3a-9cad-e4f650ddb60e.webp" alt="شعار زي ما بدك">
         <h1>موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل</h1>
     </header>
     <section id="main-section">
@@ -73,25 +75,21 @@
         <a href="javascript:void(0);" class="button" onclick="showSection('social')">قسم حسابات التواصل</a>
     </section>
     <section id="games" class="content-section">
-    <h2>قسم حسابات الألعاب</h2>
-    
-    <h3>حسابات بوبجي</h3>
-    <div>
-        <img src="     images/pubg_account1.jpg      " alt="PUBG Account 1" style="max-width: 300px;">
-        <p>السعر: 50 دولار</p>
-        <p>ID: 5438236875</p>
-    </div>
-
-    <h3>حسابات جنشن إمباكت</h3>
-    <div>
-        <img src="     images/genshin_account1.jpg    " alt="Genshin Impact Account 1" style="max-width: 300px;">
-        <p>السعر: 100 دولار</p>
-        <p>ID: 743859420</p>
-    </div>
-
-    <a href="javascript:void(0);" class="button" onclick="showMain()">العودة إلى الصفحة الرئيسية</a>
-</section>
-
+        <h2>قسم حسابات الألعاب</h2>
+        <h3>حسابات بوبجي</h3>
+        <div>
+            <img src="images/pubg_account1.jpg" alt="PUBG Account 1" style="max-width: 300px;">
+            <p>السعر: 50 دولار</p>
+            <p>ID: 5438236875</p>
+        </div>
+        <h3>حسابات جنشن إمباكت</h3>
+        <div>
+            <img src="images/genshin_account1.jpg" alt="Genshin Impact Account 1" style="max-width: 300px;">
+            <p>السعر: 100 دولار</p>
+            <p>ID: 743859420</p>
+        </div>
+        <a href="javascript:void(0);" class="button" onclick="showMain()">العودة إلى الصفحة الرئيسية</a>
+    </section>
     <section id="social" class="content-section">
         <h2>قسم حسابات التواصل</h2>
         <ul>
@@ -114,6 +112,7 @@
             document.getElementById('main-section').style.display = 'block';
         }
     </script>
+
 
 
 
