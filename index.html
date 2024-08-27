@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل</title>
+    <title>موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,68 +65,30 @@
             margin-top: 10px;
             font-size: 18px;
         }
-        .description {
-            text-align: center;
-            padding: 20px;
-            font-size: 18px;
-            background-color: rgba(255, 255, 255, 0.9);
-            margin: 10px;
-            border-radius: 10px;
-        }
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-        }
-        .image-gallery img {
-            max-width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: none;
-        }
-        .image-gallery img.active {
-            display: block;
-        }
-        .image-gallery .image-counter {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .lang-switch {
+        .language-switcher {
             position: fixed;
             top: 20px;
-            right: 20px;
+            left: 20px;
             background-color: #1b1f3b;
             color: #ffffff;
-            padding: 10px;
+            border: none;
             border-radius: 5px;
+            padding: 10px;
             cursor: pointer;
             z-index: 1000;
         }
-        .lang-menu {
-            display: none;
-            background-color: #ffffff;
-            color: #000000;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        .image-gallery {
+            position: relative;
+            max-width: 300px;
+            margin: 10px auto;
         }
-        .lang-menu button {
-            display: block;
-            padding: 10px;
-            border: none;
-            background-color: #1b1f3b;
-            color: #ffffff;
-            font-size: 16px;
+        .image-gallery img {
+            max-width: 100%;
+            border-radius: 10px;
             cursor: pointer;
-            width: 100%;
-            text-align: left;
         }
-        .lang-menu button:hover {
-            background-color: #162447;
+        .image-gallery .caption {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -134,23 +96,11 @@
     <header>
         <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A7-%D9%A3%D9%A8-%D9%A3%D9%A7-%D9%A2%D9%A4%D9%A9_com.android.chrome-edit.jpg" alt="شعار زي ما بدك">
         <h1 id="site-title">موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل</h1>
-        <div class="lang-switch" onclick="toggleLangMenu()">
-            اللغة
-            <div class="lang-menu" id="lang-menu">
-                <button onclick="switchLanguage('ar')">العربية</button>
-                <button onclick="switchLanguage('en')">English</button>
-            </div>
-        </div>
+        <button class="language-switcher" onclick="toggleLanguage()">اللغة</button>
     </header>
-    <section class="description">
-        <p id="description-text">مرحباً بكم في متجرنا الرائد في بيع حسابات الألعاب وحسابات التواصل الاجتماعي. نحن هنا لنكون جسر الثقة بينكم وبين البائعين، حيث نقدم لكم تجربة تسوق مميزة وآمنة بنسبة 100%. يعمل متجرنا كوسيط معتمد ومختص في عمليات البيع، مما يضمن أن جميع المعاملات تتم بطرق رسمية ومهنية بالكامل.</p>
-        <p id="description-note">يرجى ملاحظة أن متجرنا يقدم عددًا محدودًا من الحسابات، حيث نقوم بالبحث عن حسابات موثوقة ونتأكد من ملكيتها المؤقتة لدينا. قد تجدون عددًا قليلاً من الحسابات المتاحة في متجرنا، لا يتجاوز خمسة حسابات، ولكننا نضمن لكم جودتها ومصداقيتها.</p>
-        <p id="description-pricing">نحن نحرص على تقديم أقل الأسعار الممكنة، والتي قد تكون مختلفة بشكل كبير عن الأسعار الأصلية للحسابات. لذا، ننصحكم بعدم تفويت الفرص وحجز حساباتكم بسرعة.</p>
-        <p id="description-contact">لمعرفة المزيد من التفاصيل حول عمليات الشراء ومعلومات الحسابات، لا تترددوا في التواصل معنا عبر البريد الإلكتروني الموجود أسفل الصفحة. نحن هنا لخدمتكم وتقديم الدعم اللازم لضمان تجربة تسوق ممتازة. وشكراً لزيارتكم.</p>
-    </section>
     <section id="main-section">
-        <a href="#games" class="button" onclick="showSection('games')">قسم حسابات الألعاب</a>
-        <a href="#social" class="button" onclick="showSection('social')">قسم حسابات التواصل</a>
+        <a href="javascript:void(0);" class="button" onclick="showSection('games')">قسم حسابات الألعاب</a>
+        <a href="javascript:void(0);" class="button" onclick="showSection('social')">قسم حسابات التواصل</a>
     </section>
     <section id="games" class="content-section">
         <h2>قسم حسابات الألعاب</h2>
@@ -162,86 +112,82 @@
         </div>
         <h3>حسابات جنشن إمباكت</h3>
         <div class="image-gallery">
-          <p>السعر: 100 دولار</p>
-            <p>ID: 743859420 </p>  
-            <div class="image-counter" id="image-counter">صورة 1 من 11</div>
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A7-%D9%A4%D9%A0-%D9%A8%D9%A6%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 1" class="active">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A5%D9%A3-%D9%A6%D9%A7%D9%A3_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 2">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A4%D9%A2-%D9%A3%D9%A7%D9%A5_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 3">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A0%D9%A6-%D9%A2%D9%A9%D9%A6_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 4">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A0%D9%A5-%D9%A6%D9%A2%D9%A5_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 5">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A0%D9%A6-%D9%A2%D9%A9%D9%A6_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 6">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A5-%D9%A0%D9%A5-%D9%A6%D9%A2%D9%A5_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 7">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A4-%D9%A4%D9%A9-%D9%A1%D9%A1%D9%A0_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 8">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A4-%D9%A4%D9%A2-%D9%A3%D9%A6%D9%A7_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 9">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A4-%D9%A1%D9%A9-%D9%A0%D9%A1%D9%A8_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 10">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A4-%D9%A1%D9%A0-%D9%A8%D9%A2%D9%A1_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 11">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A7-%D9%A4%D9%A0-%D9%A8%D9%A6%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 1">
+            <div class="caption">
+                <p>السعر: 100 دولار</p>
+                <p>ID: 743859420</p>
+                <p>(1/10) الصورة الأولى من 10</p>
+            </div>
         </div>
-        <p>توجد <span id="total-images">11</span> صورة في هذا القسم.</p>
+        <!-- باقي الصور المخفية -->
+        <div class="image-gallery">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A5%D9%A3-%D9%A6%D9%A7%D9%A3_com.miHoYo.GenshinImpact.jpg" style="display:none;">
+            <!-- عرض باقي الصور المخفية هنا -->
+        </div>
+        <a href="javascript:void(0);" class="button" onclick="showMain()">العودة إلى الصفحة الرئيسية</a>
     </section>
     <section id="social" class="content-section">
         <h2>قسم حسابات التواصل</h2>
-        <h3>حسابات إنستغرام</h3>
-        
-    
-        
+        <ul>
+            <li>حسابات إنستجرام</li>
+        </ul>
+        <a href="javascript:void(0);" class="button" onclick="showMain()">العودة إلى الصفحة الرئيسية</a>
     </section>
     <footer>
-        <p>جميع الحقوق محفوظة © 2024 <a href="mailto:www.alqrshiglma.com@gmail.com">www.alqrshiglma.com@gmail.com</a></p>
+        <p class="contact">للتواصل: <a href="mailto:www.alqrshiglma.com@gmail.com">www.alqrshiglma.com@gmail.com</a></p>
+        <p>&copy; 2024 موقع زي ما بدك. جميع الحقوق محفوظة.</p>
     </footer>
+
     <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.image-gallery img');
-        const totalImages = images.length;
-        const counter = document.getElementById('image-counter');
-        const langMenu = document.getElementById('lang-menu');
-
-        function updateCounter() {
-            counter.textContent = `صورة ${currentIndex + 1} من ${totalImages}`;
-        }
-
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
             });
-            updateCounter();
+            document.getElementById(sectionId).style.display = 'block';
         }
 
-        function switchLanguage(lang) {
-            const isArabic = lang === 'ar';
-            document.documentElement.lang = lang;
-            document.getElementById('page-title').textContent = isArabic ? 'موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل' : 'ZeeMaBadak for Selling Game Accounts and Social Media Accounts';
-            document.getElementById('description-text').textContent = isArabic ? 'مرحباً بكم في متجرنا الرائد في بيع حسابات الألعاب وحسابات التواصل الاجتماعي. نحن هنا لنكون جسر الثقة بينكم وبين البائعين، حيث نقدم لكم تجربة تسوق مميزة وآمنة بنسبة 100%. يعمل متجرنا كوسيط معتمد ومختص في عمليات البيع، مما يضمن أن جميع المعاملات تتم بطرق رسمية ومهنية بالكامل.' : 'Welcome to our leading store for selling game and social media accounts. We are here to be a trusted bridge between you and sellers, providing you with a distinguished and 100% secure shopping experience. Our store works as an accredited and specialized intermediary in sales, ensuring that all transactions are conducted in a fully official and professional manner.';
-            document.getElementById('description-note').textContent = isArabic ? 'يرجى ملاحظة أن متجرنا يقدم عددًا محدودًا من الحسابات، حيث نقوم بالبحث عن حسابات موثوقة ونتأكد من ملكيتها المؤقتة لدينا. قد تجدون عددًا قليلاً من الحسابات المتاحة في متجرنا، لا يتجاوز خمسة حسابات، ولكننا نضمن لكم جودتها ومصداقيتها.' : 'Please note that our store offers a limited number of accounts, as we search for reliable accounts and ensure their temporary ownership with us. You may find a few accounts available in our store, not exceeding five accounts, but we guarantee their quality and credibility.';
-            document.getElementById('description-pricing').textContent = isArabic ? 'نحن نحرص على تقديم أقل الأسعار الممكنة، والتي قد تكون مختلفة بشكل كبير عن الأسعار الأصلية للحسابات. لذا، ننصحكم بعدم تفويت الفرص وحجز حساباتكم بسرعة.' : 'We strive to offer the lowest possible prices, which may vary significantly from the original account prices. Therefore, we advise you not to miss opportunities and secure your accounts quickly.';
-            document.getElementById('description-contact').textContent = isArabic ? 'لمعرفة المزيد من التفاصيل حول عمليات الشراء ومعلومات الحسابات، لا تترددوا في التواصل معنا عبر البريد الإلكتروني الموجود أسفل الصفحة. نحن هنا لخدمتكم وتقديم الدعم اللازم لضمان تجربة تسوق ممتازة. وشكراً لزيارتكم.' : 'For more details about purchase operations and account information, feel free to contact us via the email at the bottom of the page. We are here to serve you and provide the necessary support to ensure an excellent shopping experience. Thank you for visiting.';
-            document.querySelectorAll('section h3').forEach(h3 => h3.textContent = isArabic ? h3.textContent.replace('Accounts', 'حسابات') : h3.textContent.replace('حسابات', 'Accounts'));
-            document.querySelectorAll('section a').forEach(a => a.textContent = isArabic ? a.textContent.replace('Back to Home', 'العودة إلى الصفحة الرئيسية') : a.textContent.replace('العودة إلى الصفحة الرئيسية', 'Back to Home'));
-        }
-
-        function toggleLangMenu() {
-            langMenu.style.display = langMenu.style.display === 'block' ? 'none' : 'block';
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const userLang = navigator.language || navigator.userLanguage;
-            switchLanguage(userLang.includes('ar') ? 'ar' : 'en');
-            showImage(currentIndex);
-        });
-
-        document.querySelectorAll('.image-gallery img').forEach(img => {
-            img.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % totalImages;
-                showImage(currentIndex);
+        function showMain() {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
             });
-        });
+            document.getElementById('main-section').style.display = 'block';
+        }
+
+        function toggleLanguage() {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = newLang;
+            updateLanguage(newLang);
+        }
+
+        function updateLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('site-title').innerText = 'ZeeMaBadak Website for Selling Game and Social Accounts';
+                document.querySelector('.language-switcher').innerText = 'Language';
+                document.querySelector('[onclick="showSection(\'games\')"]').innerText = 'Game Accounts Section';
+                document.querySelector('[onclick="showSection(\'social\')"]').innerText = 'Social Media Accounts Section';
+                document.querySelector('#games h2').innerText = 'Game Accounts Section';
+                document.querySelector('#games h3').innerText = 'PUBG Accounts';
+                document.querySelector('#games h3 + div + h3').innerText = 'Genshin Impact Accounts';
+                document.querySelector('#social h2').innerText = 'Social Media Accounts Section';
+                document.querySelector('#social ul li').innerText = 'Instagram Accounts';
+                document.querySelector('.contact a').innerText = 'Contact: www.alqrshiglma.com@gmail.com';
+                document.querySelector('footer p:last-child').innerText = '© 2024 ZeeMaBadak Website. All Rights Reserved.';
+            } else {
+                document.getElementById('site-title').innerText = 'موقع زي ما بدك لبيع حسابات الألعاب وحسابات التواصل';
+                document.querySelector('.language-switcher').innerText = 'اللغة';
+                document.querySelector('[onclick="showSection(\'games\')"]').innerText = 'قسم حسابات الألعاب';
+                document.querySelector('[onclick="showSection(\'social\')"]').innerText = 'قسم حسابات التواصل';
+                document.querySelector('#games h2').innerText = 'قسم حسابات الألعاب';
+                document.querySelector('#games h3').innerText = 'حسابات بوبجي';
+                document.querySelector('#games h3 + div + h3').innerText = 'حسابات جنشن إمباكت';
+                document.querySelector('#social h2').innerText = 'قسم حسابات التواصل';
+                document.querySelector('#social ul li').innerText = 'حسابات إنستجرام';
+                document.querySelector('.contact a').innerText = 'للتواصل: www.alqrshiglma.com@gmail.com';
+                document.querySelector('footer p:last-child').innerText = '© 2024 موقع زي ما بدك. جميع الحقوق محفوظة.';
+            }
+        }
     </script>
-
-
-
-
-
-
 
 
 
