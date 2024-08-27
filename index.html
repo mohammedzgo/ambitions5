@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -71,14 +72,35 @@
         }
         .image-gallery {
             position: relative;
-            max-width: 300px;
+            max-width: 100%;
             margin: 10px auto;
-            display: inline-block;
-            text-align: left;
+            display: block;
+            text-align: center;
         }
         .image-gallery img {
             max-width: 100%;
             border-radius: 10px;
+        }
+        .return-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #1b1f3b;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .return-button:hover {
+            background-color: #162447;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
         }
     </style>
 </head>
@@ -98,8 +120,9 @@
         <a href="javascript:void(0);" class="button" onclick="showSection('games')">قسم حسابات الألعاب</a>
         <a href="javascript:void(0);" class="button" onclick="showSection('social')">قسم حسابات التواصل</a>
     </section>
-    <section id="games" class="content-section">
+    <section id="games" class="content-section active">
         <h2 id="games-title">قسم حسابات الألعاب</h2>
+        <a href="javascript:void(0);" class="return-button" onclick="showSection('main-section')">العودة</a>
         <h3 id="pubg-title">حسابات بوبجي</h3>
         <div>
             <img src="images/pubg_account1.jpg" alt="PUBG Account 1" style="max-width: 300px;">
@@ -110,16 +133,20 @@
         <p id="genshin-price">السعر: 100 دولار</p>
         <p id="genshin-id">ID: 743859420</p>
         <div class="image-gallery">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A7-%D9%A4%D9%A0-%D9%A8%D9%A6%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 1" class="active">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A7-%D9%A4%D9%A0-%D9%A8%D9%A6%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 1">
             <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A5%D9%A3-%D9%A6%D9%A7%D9%A3_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 2">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A4%D9%A5-%D9%A8%D9%A9%D9%A7_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 3">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0-%D9%A2%D9%A8%D9%A3_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 4">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A1%D9%A5-%D9%A3%D9%A4%D9%A8_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 5">
-            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A0%D9%A6-%D9%A2%D9%A9%D9%A6_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 6">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0-%D9%A2%D9%A8%D9%A3_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 3">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A1%D9%A5-%D9%A3%D9%A4%D9%A8_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 4">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A1%D9%A7_%D9%A1%D9%A2%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 5">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0_%D9%A1%D9%A1%D9%A7_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 6">
             <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A3%D9%A3_%D9%A2%D9%A8%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 7">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A1%D9%A9_%D9%A2%D9%A7%D9%A1_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 8">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0_%D9%A1%D9%A3%D9%A9_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 9">
+            <img src="https://raw.githubusercontent.com/mohammedzgo/ambitions5/main/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4-%D9%A0%D9%A8-%D9%A2%D9%A7-%D9%A1%D9%A5-%D9%A5%D9%A6-%D9%A2%D9%A0_%D9%A1%D9%A3%D9%A8_com.miHoYo.GenshinImpact.jpg" alt="Genshin Impact Account 10">
         </div>
     </section>
     <section id="social" class="content-section">
+        <a href="javascript:void(0);" class="return-button" onclick="showSection('main-section')">العودة</a>
         <h2 id="social-title">قسم حسابات التواصل</h2>
         <h3 id="instagram-title">حسابات إنستجرام</h3>
         <div>
@@ -172,16 +199,14 @@
 
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
+                section.classList.remove('active');
             });
-            document.getElementById(sectionId).style.display = 'block';
+            document.getElementById(sectionId).classList.add('active');
         }
         
-        // Initial section display
+        // Open "games" section by default
         showSection('games');
     </script>
-
-
 
 
 
